@@ -1,0 +1,112 @@
+@use "../scss/_colors.scss";
+@import "../scss/_text.scss";
+
+
+.ASCIItitle {
+    text-align: center;
+}
+
+.subtitel {
+    text-align: center;
+}
+
+.wrapper {
+    margin: 1em;
+}
+
+.nav-tabs {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin-bottom: 3em;
+
+    li {
+        margin: 5px;
+    }
+}
+
+.side-menu {
+    border: 1px dotted colors.$border-color;
+    padding: 1em;
+    position: sticky;
+    margin-bottom: 3em;
+    .side-menu-list {
+        display: flex;
+        li{
+            margin: 5px 15px 5px 15px;
+        }
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 20px;
+
+    .resources {
+        border: 3px solid colors.$border-color;
+        padding: 5px;
+        width: 70%;
+        height: 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 800px) {
+    .ASCIItitle {
+        text-align: unset;
+        font-size: 2.3vw;
+
+    }
+
+    .subtitel {
+        text-align: unset;
+        font-size: 18px;
+    }
+
+    .nav-tabs {
+        gap: 4.5em;
+        justify-content: unset;
+        font-size: 18px;
+        margin-bottom: 5em;
+    }
+
+
+    .content-container {
+        flex-wrap: unset;
+        flex-direction: unset;
+
+        .resources {
+            margin-left: 0;
+        }
+    }
+
+    .side-menu {
+        margin-top: 0;
+        margin-right: 0;
+        border: 1px dotted colors.$border-color;
+        width: 100px;
+        height: 100%;
+        padding: 1em;
+        position: sticky;
+        justify-content: unset;
+
+        .side-menu-list {
+            display: unset;
+            li{
+                margin: 0px 0px 20px 0px;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .ASCIItitle {
+        font-size: 1.5em;
+    }
+}

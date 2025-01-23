@@ -1,0 +1,27 @@
+* {
+    background-color: colors.$mainback-color;
+    font-family: "Terminus", "courier new", monospace;
+    color: colors.$main-color;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1em;
+    max-width: 1440px;
+    box-sizing: content-box;
+}
+
+body {
+    font-size: 14px; //1em til 12px
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+a {
+    padding: 0.2em 0.3em;
+    &:hover {
+        background-color: colors.$link-color;
+        transition: background-color .5s;
+    }
+}
