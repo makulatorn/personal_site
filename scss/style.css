@@ -4,13 +4,18 @@
   color: #cbe9d1;
   margin: 0 auto;
   padding: 0;
-  font-size: 1em;
   max-width: 1440px;
   box-sizing: content-box;
 }
 
-body {
-  font-size: 14px;
+main {
+  border: 3px solid #d0ffd7;
+  padding: 5px;
+  height: 100%;
+  padding: 10px;
+  margin: 15px;
+  margin-left: 0;
+  margin: 20px;
 }
 
 li {
@@ -26,12 +31,18 @@ a:hover {
   transition: background-color 0.5s;
 }
 
+@media only screen and (min-width: 800px) {
+  main {
+    width: 70%;
+  }
+}
 .ASCIItitle {
   text-align: center;
 }
 
 .subtitel {
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .wrapper {
@@ -52,27 +63,22 @@ a:hover {
 .side-menu {
   border: 1px dotted #d0ffd7;
   padding: 1em;
-  position: sticky;
-  margin-bottom: 3em;
 }
 .side-menu .side-menu-list {
   display: flex;
-}
-.side-menu .side-menu-list li {
-  margin: 5px 15px 5px 15px;
+  gap: 2px;
 }
 
-.content-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column-reverse;
-  margin: 20px;
-}
-.content-container .resources {
-  border: 3px solid #d0ffd7;
+.welcome .title-container {
+  border: 1px dotted #d0ffd7;
   padding: 5px;
-  width: 70%;
-  height: 100%;
+}
+.welcome .title-container .welcome-title {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+.welcome .title-container .welcome-subtitle {
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -82,36 +88,33 @@ a:hover {
   }
   .subtitel {
     text-align: unset;
-    font-size: 18px;
+    font-size: 1.5rem;
   }
   .nav-tabs {
     gap: 4.5em;
     justify-content: unset;
     font-size: 18px;
-    margin-bottom: 5em;
+    margin-bottom: 0;
   }
-  .content-container {
-    flex-wrap: unset;
-    flex-direction: unset;
-  }
-  .content-container .resources {
+  .welcome .title-container {
+    width: 70%;
     margin-left: 0;
   }
+  .welcome .title-container .welcome-title {
+    font-size: 1.5rem;
+  }
+  .welcome .title-container .welcome-subtitle {
+    font-size: unset;
+  }
   .side-menu {
-    margin-top: 0;
-    margin-right: 0;
-    border: 1px dotted #d0ffd7;
-    width: 100px;
-    height: 100%;
-    padding: 1em;
-    position: sticky;
-    justify-content: unset;
+    right: 0;
+    top: 29em;
+    margin: 20px;
+    position: fixed;
   }
   .side-menu .side-menu-list {
-    display: unset;
-  }
-  .side-menu .side-menu-list li {
-    margin: 0px 0px 20px 0px;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 @media only screen and (min-width: 900px) {

@@ -8,12 +8,12 @@
 
 .subtitel {
     text-align: center;
+    font-size: .9rem;
 }
 
 .wrapper {
     margin: 1em;
 }
-
 .nav-tabs {
     justify-content: center;
     display: flex;
@@ -29,29 +29,29 @@
 .side-menu {
     border: 1px dotted colors.$border-color;
     padding: 1em;
-    position: sticky;
-    margin-bottom: 3em;
+
     .side-menu-list {
         display: flex;
-        li{
-            margin: 5px 15px 5px 15px;
+        gap: 2px;
+    }
+}
+
+
+.welcome {
+    .title-container {
+        border: 1px dotted colors.$border-color;
+        padding: 5px;
+        .welcome-title {
+            padding-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .welcome-subtitle {
+            font-size: 14px;
         }
     }
 }
 
-.content-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    margin: 20px;
-
-    .resources {
-        border: 3px solid colors.$border-color;
-        padding: 5px;
-        width: 70%;
-        height: 100%;
-    }
-}
 
 
 
@@ -64,41 +64,38 @@
 
     .subtitel {
         text-align: unset;
-        font-size: 18px;
+        font-size: 1.5rem;
     }
 
     .nav-tabs {
         gap: 4.5em;
         justify-content: unset;
         font-size: 18px;
-        margin-bottom: 5em;
+        margin-bottom: 0;
     }
 
-
-    .content-container {
-        flex-wrap: unset;
-        flex-direction: unset;
-
-        .resources {
+    .welcome {
+        .title-container {
+            width: 70%;
             margin-left: 0;
+            .welcome-title{
+                font-size: 1.5rem;
+            }
+            .welcome-subtitle {
+                font-size: unset;
+            }
         }
     }
 
-    .side-menu {
-        margin-top: 0;
-        margin-right: 0;
-        border: 1px dotted colors.$border-color;
-        width: 100px;
-        height: 100%;
-        padding: 1em;
-        position: sticky;
-        justify-content: unset;
 
+    .side-menu {
+        right: 0;
+        top: 29em;
+        margin: 20px;
+        position: fixed;
         .side-menu-list {
-            display: unset;
-            li{
-                margin: 0px 0px 20px 0px;
-            }
+            flex-direction: column;
+            gap: 10px;
         }
 
     }
