@@ -4,6 +4,7 @@
 
 .ASCIItitle {
     text-align: center;
+    font-size: 12px;
 }
 
 .subtitel {
@@ -14,6 +15,7 @@
 .wrapper {
     margin: 1em;
 }
+
 .nav-tabs {
     justify-content: center;
     display: flex;
@@ -41,6 +43,8 @@
     .title-container {
         border: 1px dotted colors.$border-color;
         padding: 5px;
+        margin-bottom: 15px;
+
         .welcome-title {
             padding-bottom: 1rem;
             font-size: 1rem;
@@ -49,9 +53,38 @@
         .welcome-subtitle {
             font-size: 14px;
         }
+        
+    }
+    .welcome_about_title {
+        border: 1px dotted colors.$border-color;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: colors.$link-color;
+            transition: background-color .5s;
+        }
     }
 }
 
+
+.about {
+    .about-title {
+        border: 1px dotted colors.$border-color;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: colors.$link-color;
+            transition: background-color .5s;
+        }
+    }
+
+    .about-txt {
+        margin: 5px;
+        margin-bottom: 10px;
+    }
+}
 
 
 
@@ -78,9 +111,11 @@
         .title-container {
             width: 70%;
             margin-left: 0;
-            .welcome-title{
+
+            .welcome-title {
                 font-size: 1.5rem;
             }
+
             .welcome-subtitle {
                 font-size: unset;
             }
@@ -93,6 +128,7 @@
         top: 29em;
         margin: 20px;
         position: fixed;
+
         .side-menu-list {
             flex-direction: column;
             gap: 10px;
@@ -106,4 +142,5 @@
     .ASCIItitle {
         font-size: 1.5em;
     }
+
 }
