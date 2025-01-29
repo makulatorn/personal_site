@@ -13,9 +13,20 @@ main {
     padding: 5px;
     height: 100%;
     padding: 10px;
-    margin: 15px;
-    margin-left: 0;
+    margin: 15px auto;
+}
 
+.commit-log-entry{
+    margin: 5px;
+}
+
+summary{
+    padding: .5em;
+}
+
+time{
+    font-style: italic;
+    margin: 5px;
 }
 
 li {
@@ -35,5 +46,6 @@ a {
 @media only screen and (min-width: 800px) {
     main {
         width: 70%;
+        margin-left: 0;
     }
 }

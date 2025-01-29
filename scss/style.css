@@ -13,8 +13,20 @@ main {
   padding: 5px;
   height: 100%;
   padding: 10px;
-  margin: 15px;
-  margin-left: 0;
+  margin: 15px auto;
+}
+
+.commit-log-entry {
+  margin: 5px;
+}
+
+summary {
+  padding: 0.5em;
+}
+
+time {
+  font-style: italic;
+  margin: 5px;
 }
 
 li {
@@ -33,6 +45,7 @@ a:hover {
 @media only screen and (min-width: 800px) {
   main {
     width: 70%;
+    margin-left: 0;
   }
 }
 .ASCIItitle {
@@ -50,11 +63,11 @@ a:hover {
 }
 
 .nav-tabs {
-  justify-content: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 3em;
+  flex-direction: column;
+  margin-left: 0;
   margin-bottom: 3em;
+  gap: 1rem;
 }
 .nav-tabs li {
   margin: 5px;
@@ -63,6 +76,7 @@ a:hover {
 .side-menu {
   border: 1px dotted #d0ffd7;
   padding: 1em;
+  margin-bottom: 2em;
 }
 .side-menu .side-menu-list {
   display: flex;
@@ -80,11 +94,13 @@ a:hover {
 }
 .welcome .title-container .welcome-subtitle {
   font-size: 14px;
+  margin-bottom: 10px;
 }
 .welcome .welcome_about_title {
   border: 1px dotted #d0ffd7;
   margin-bottom: 10px;
   margin-top: 10px;
+  background-color: rgba(39, 78, 48, 0.3019607843);
 }
 .welcome .welcome_about_title:hover {
   background-color: #274E30;
@@ -95,6 +111,7 @@ a:hover {
   border: 1px dotted #d0ffd7;
   margin-bottom: 10px;
   margin-top: 10px;
+  background-color: rgba(39, 78, 48, 0.3019607843);
 }
 .about .about-title:hover {
   background-color: #274E30;
@@ -119,9 +136,9 @@ a:hover {
     justify-content: unset;
     font-size: 18px;
     margin-bottom: 0;
+    flex-direction: unset;
   }
   .welcome .title-container {
-    width: 70%;
     margin-left: 0;
   }
   .welcome .title-container .welcome-title {
