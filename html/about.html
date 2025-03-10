@@ -9,6 +9,7 @@
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='all' href='../scss/style.css'>
+    <script src="/js/burger.js" defer></script>
 
 </head>
 
@@ -33,6 +34,7 @@
         </header>
         <br>
         <nav role="navigation">
+            <button onclick="myFunction()" class="burger">X</button>
             <ul class="nav-tabs">
                 <li>
                     <a href="../index.html">Home</a>
@@ -58,39 +60,43 @@
 
         <main>
             <div class="content-container">
-            <section class="about">
+                <section class="about">
 
-                <details class="about-details">
-                    <summary class="about-title">About me</summary>
-                    <h4 class="about-txt">I'm Sasha, a webdev and experimental muscician from Denmark</h4>
-                    <p class="about-txt">This site is meant as a portfolio, a way to express myself, and as a hub to show off all of the projects I'm working on and want to show off!</p>
-                    <p class="about-txt">I love personal sites,there's less of them now, or they're harder to find atleast, but they can be super expressive and I love to see people's creative side, so let's bring it back together, as a community!</p>
+                    <details class="about-details" open>
+                        <summary class="about-title">About me</summary>
+                        <h4 class="about-txt">I'm Sasha, a webdev and experimental muscician from Denmark</h4>
+                        <p class="about-txt">This site is meant as a portfolio, a way to express myself, and as a hub to
+                            show off all of the projects I'm working on and want to show off!</p>
+                        <p class="about-txt">I love personal sites,there's less of them now, or they're harder to find
+                            atleast, but they can be super expressive and I love to see people's creative side, so let's
+                            bring it back together, as a community!</p>
 
-                </details>
-                
-                <details class="about-details">
-                    <summary class="about-title">Skills</summary>
-                    <h4 class="about-txt">Skills/interests of mine I'm actively working on</h4>
-                    <ul>
-                        <li>- HTML</li>
-                        <li>- CSS/SCSS</li>
-                        <li>- Javascript</li>
-                        <li>- Pure data</li>
-                        <li>- DIY effects pedals</li>
-                    </ul>
-                </details>
+                    </details>
 
-                <details class="about-details">
-                    <summary class="about-title">Contact</summary>
-                    <h4 class="about-txt">Ways to get in contact with me!</h4>
-                    <address class="about-txt"><a href="#">E-mail</a></address>
-                   <ul>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Bandcamp</a></li>
-                   </ul>
-                </details>
-            </section>
-        </div>
+                    <details class="about-details">
+                        <summary class="about-title">Skills</summary>
+                        <h4 class="about-txt">Skills/interests of mine I'm actively working on</h4>
+                        <ul>
+                            <li>- HTML</li>
+                            <li>- CSS/SASS</li>
+                            <li>- PHP</li>
+                            <li>- Javascript</li>
+                            <li>- Pure data</li>
+                            <li>- DIY effects pedals</li>
+                        </ul>
+                    </details>
+
+                    <details class="about-details">
+                        <summary class="about-title">Contact</summary>
+                        <h4 class="about-txt">Ways to get in contact with me!</h4>
+                        <address class="about-txt"><a href="#">E-mail</a></address>
+                        <ul>
+                            <li><a href="#">Github</a></li>
+                            <li><a href="#">Bandcamp</a></li>
+                        </ul>
+                    </details>
+                </section>
+            </div>
         </main>
         <footer>
 

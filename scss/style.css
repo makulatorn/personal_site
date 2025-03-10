@@ -1,3 +1,7 @@
+@font-face {
+  font-family: NAME;
+  src: url(PATH);
+}
 * {
   background-color: #0b110c;
   font-family: "Terminus", "courier new", monospace;
@@ -34,10 +38,10 @@ li {
   padding: 5px;
 }
 
-a {
+a, button {
   padding: 0.2em 0.3em;
 }
-a:hover {
+a:hover, button:hover {
   background-color: #274E30;
   transition: background-color 0.5s;
 }
@@ -48,6 +52,67 @@ a:hover {
     margin-left: 0;
   }
 }
+@font-face {
+  font-family: NAME;
+  src: url(PATH);
+}
+* {
+  background-color: #0b110c;
+  font-family: "Terminus", "courier new", monospace;
+  color: #cbe9d1;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  box-sizing: content-box;
+}
+
+main {
+  border: 3px solid #d0ffd7;
+  padding: 5px;
+  height: 100%;
+  padding: 10px;
+  margin: 15px auto;
+}
+
+.commit-log-entry {
+  margin: 5px;
+}
+
+summary {
+  padding: 0.5em;
+}
+
+time {
+  font-style: italic;
+  margin: 5px;
+}
+
+li {
+  list-style: none;
+  padding: 5px;
+}
+
+a, button {
+  padding: 0.2em 0.3em;
+}
+a:hover, button:hover {
+  background-color: #274E30;
+  transition: background-color 0.5s;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    width: 70%;
+    margin-left: 0;
+  }
+}
+.burger {
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 10px;
+}
+
 .ASCIItitle {
   text-align: center;
   font-size: 12px;
@@ -63,8 +128,7 @@ a:hover {
 }
 
 .nav-tabs {
-  display: flex;
-  flex-direction: column;
+  display: none;
   margin-left: 0;
   margin-bottom: 3em;
   gap: 1rem;
@@ -77,10 +141,11 @@ a:hover {
   border: 1px dotted #d0ffd7;
   padding: 1em;
   margin-bottom: 2em;
+  display: none;
 }
 .side-menu .side-menu-list {
   display: flex;
-  gap: 2px;
+  gap: 100px;
 }
 
 .welcome .title-container {
@@ -102,10 +167,6 @@ a:hover {
   margin-top: 10px;
   background-color: rgba(39, 78, 48, 0.3019607843);
 }
-.welcome .welcome_about_title:hover {
-  background-color: #274E30;
-  transition: background-color 0.5s;
-}
 
 .about .about-title {
   border: 1px dotted #d0ffd7;
@@ -113,16 +174,15 @@ a:hover {
   margin-top: 10px;
   background-color: rgba(39, 78, 48, 0.3019607843);
 }
-.about .about-title:hover {
-  background-color: #274E30;
-  transition: background-color 0.5s;
-}
 .about .about-txt {
   margin: 5px;
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 800px) {
+  .burger {
+    display: none;
+  }
   .ASCIItitle {
     text-align: unset;
     font-size: 2.3vw;
@@ -132,6 +192,7 @@ a:hover {
     font-size: 1.5rem;
   }
   .nav-tabs {
+    display: flex;
     gap: 4.5em;
     justify-content: unset;
     font-size: 18px;
@@ -152,6 +213,7 @@ a:hover {
     top: 29em;
     margin: 20px;
     position: fixed;
+    display: unset;
   }
   .side-menu .side-menu-list {
     flex-direction: column;
