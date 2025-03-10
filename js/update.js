@@ -46,7 +46,7 @@ function fetchAllCommits(owner, repo) {
           // Create a log entry for each commit
           let commitLogEntry = document.createElement("div");
           commitLogEntry.classList.add("commit-log-entry");
-          commitLogEntry.textContent = `Updated on ${commitYear}-${commitMonth}-${commitDay}: ${commitMessage}`;
+          commitLogEntry.textContent = `${commitDay}-${commitMonth}-${commitYear}: ${commitMessage}`;
           
           // Append the commit log entry to the commit log container
           document.querySelector(commitTagClass).appendChild(commitLogEntry);
