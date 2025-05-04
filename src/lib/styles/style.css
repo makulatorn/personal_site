@@ -180,18 +180,29 @@ a:hover, button:hover {
   background-color: rgba(39, 78, 48, 0.3019607843);
 }
 
-.about .about-title {
+.about-title {
   border: 1px dotted #d0ffd7;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.about .about-title:hover {
+.about-title:hover {
   background-color: #274E30;
   transition: background-color 0.5s;
 }
-.about .about-txt {
+.about-summary {
+  font-weight: bold;
+  padding-left: 15px;
+}
+.about-txt {
   margin: 5px;
   margin-bottom: 10px;
+}
+.about-summary-title {
+  font-size: 16px;
+  padding-left: 30px;
+}
+.about-summary-list {
+  padding-left: 30px;
 }
 
 @media only screen and (min-width: 800px) {
