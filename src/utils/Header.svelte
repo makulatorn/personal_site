@@ -1,5 +1,5 @@
 <header>
-    <pre class="ASCIItitle">
+	<pre class="ASCIItitle">
 +---------------------------------------+
 | ___________  ___   _____ _   _   ___  |
 ||_   _| ___ \/ _ \ /  ___| | | | / _ \ |
@@ -9,5 +9,7 @@
 |  \_/ \_| \_\_| |_/\____/\_| |_/\_| |_/|
 +---------------------------------------+
     </pre>
-    <h1 class="subtitel">Coding, music and other personal projects!</h1>
+	<div class="subtitel-con">
+		<h1 class="subtitel">Coding, music and other personal projects!</h1>
+	</div>
 </header>
