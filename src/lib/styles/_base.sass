@@ -1,0 +1,68 @@
+//MIXINS
+@mixin Link
+    background-color: $link-color
+    transition: background-color .5s
+
+
+//base
+$main-color: #cbe9d1
+$mainback-color: #0b110c
+$border-color: #d0ffd7
+$link-color: #274E30
+$closedlink-color: #274e304d
+
+
+
+//TEXT DECORATION
+@font-face 
+    font-family: NAME
+    src: url(PATH)
+
+* 
+    background-color: $mainback-color
+    font-family: "Terminus", "courier new", monospace
+    color: $main-color
+    margin: 0 auto
+    padding: 0
+    max-width: 1440px
+    box-sizing: content-box
+
+
+main 
+    border: 3px solid $border-color
+    padding: 5px
+    height: 100%
+    padding: 10px
+    margin: 15px auto
+
+
+.commit-log-entry
+    margin: 5px
+
+
+summary
+    padding: .5em
+
+
+time
+    font-style: italic
+    margin: 5px
+
+
+li 
+    list-style: none
+    padding: 5px
+
+
+a, button
+    padding: 0.2em 0.3em
+    &:hover 
+        @include Link
+    
+
+
+@media only screen and (min-width: 800px) 
+    main 
+        width: 70%
+        margin-left: 0
+    

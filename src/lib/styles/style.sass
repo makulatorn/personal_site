@@ -1,0 +1,119 @@
+@use "_base.sass"
+@import "_base.sass"
+
+.burger
+    border: none
+    font-size: 25px
+    cursor: pointer 
+    margin: 10px
+    
+
+.ASCIItitle
+    text-align: center
+    font-size: 12px
+
+.subtitel
+    text-align: center
+    font-size: .9rem
+
+.wrapper
+    margin: 1em
+
+.nav-tabs
+    display: none
+    margin-left: 0
+    margin-bottom: 3em
+    gap: 1rem
+
+    li
+        margin: 5px
+
+
+.side-menu
+    border: 1px dotted base.$border-color
+    padding: 1em
+    margin-bottom: 2em
+    display: none
+
+    .side-menu-list
+        display: flex
+        gap: 100px
+
+.welcome
+    .title-container
+        border: 1px dotted base.$border-color
+        padding: 5px
+        margin-bottom: 15px
+
+        .welcome-title
+            padding-bottom: 1rem
+            font-size: 1rem
+
+        .welcome-subtitle
+            font-size: 14px
+            margin-bottom: 10px
+
+    .welcome_about_title
+        border: 1px dotted base.$border-color
+        margin-bottom: 10px
+        margin-top: 10px
+        background-color: base.$closedlink-color
+      
+
+
+.about
+    .about-title
+        border: 1px dotted base.$border-color
+        margin-bottom: 10px
+        margin-top: 10px
+        &:hover
+            @include Link
+
+    .about-txt
+        margin: 5px
+        margin-bottom: 10px
+
+@media only screen and (min-width: 800px)
+    .burger
+        display: none
+        
+    .ASCIItitle
+        text-align: unset
+        font-size: 2.3vw
+
+    .subtitel
+        text-align: unset
+        font-size: 1.5rem
+
+    .nav-tabs
+        display: flex
+        gap: 4.5em
+        justify-content: unset
+        font-size: 18px
+        margin-bottom: 0
+        flex-direction: unset
+
+    .welcome
+        .title-container
+            margin-left: 0
+
+            .welcome-title
+                font-size: 1.5rem
+
+            .welcome-subtitle
+                font-size: unset
+
+    .side-menu
+        right: 0
+        top: 29em
+        margin: 20px
+        position: fixed
+        display: unset
+
+        .side-menu-list
+            flex-direction: column
+            gap: 10px
+
+@media only screen and (min-width: 900px)
+    .ASCIItitle
+        font-size: 1.5em
