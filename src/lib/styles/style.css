@@ -116,11 +116,13 @@ a:hover, button:hover {
 .ASCIItitle {
   text-align: center;
   font-size: 12px;
+  margin: 11px;
 }
 
 .subtitel {
   text-align: center;
   font-size: 0.9rem;
+  margin: 15px;
 }
 
 .wrapper {
@@ -135,6 +137,16 @@ a:hover, button:hover {
 }
 .nav-tabs li {
   margin: 5px;
+}
+
+.nav-tabs.open {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.side-menu.open {
+  display: block;
 }
 
 .side-menu {
