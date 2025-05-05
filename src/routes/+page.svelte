@@ -18,7 +18,6 @@
 
 <div class="wrapper">
 	<Nav />
-
 	<main>
 		<div class="content-container">
 			<section class="about">
@@ -37,7 +36,7 @@
 					</p>
 				</details>
 
-				<details class="about-details" open>
+				<details class="about-details">
 					<summary class="about-title">Skillset</summary>
 					<details>
 						<summary class="about-summary">HTML</summary>
@@ -98,31 +97,8 @@
 						<summary class="about-summary">DIY EFFECTS PEDALS</summary>
 					</details>
 				</details>
-
-				<details class="about-details">
-					<summary class="about-title">Contact</summary>
-					<h4 class="about-txt">
-						I’m always happy to connect, whether you want to share a project, ask a question, or
-						just say hi.
-					</h4>
-					<p class="about-txt">
-						If you’re into web development, sound experiments, and DIY creations, and want to give
-						or need feedback—or someone to help build your vision, I’d love to hear from you!
-					</p>
-					<p class="about-txt">
-						I’m also open to freelance or full‑time opportunities, so feel free to reach out!
-					</p>
-					<address class="about-txt">
-						<a href="mailto:you@example.com">E-mail</a>
-					</address>
-					<ul>
-						<li><a href="https://github.com/makulatorn" target="_blank">Github</a></li>
-						<li><a href="https://makulator.bandcamp.com/" target="_blank">Bandcamp</a></li>
-					</ul>
-				</details>
 			</section>
 		</div>
 	</main>
 </div>
-<Form />
 <Footer />

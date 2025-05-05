@@ -84,6 +84,31 @@
     &-summary-list
         padding-left: 30px
 
+form
+    @include Border
+    margin: 10px
+    padding: 10px
+form div 
+    display: flex
+    align-items: center
+    padding: 10px    
+
+label
+    width: 100px /* fixed width to align */
+    font-weight: bold
+
+textarea
+    flex: 1
+    padding: 5px
+    height: 100px
+input[type="email"]
+    flex: 1
+    padding: 5px
+input[type="submit"]
+    display: flex
+    width: 90px
+    height: 30px
+
 @media only screen and (min-width: 800px)
     .burger
         display: none
@@ -124,5 +149,3 @@
 @media only screen and (min-width: 900px)
     .ASCIItitle
         font-size: 1.5em
-
-
