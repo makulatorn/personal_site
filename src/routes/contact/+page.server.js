@@ -3,19 +3,19 @@ import { fail } from '@sveltejs/kit';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-  /** @param {import('@sveltejs/kit').RequestEvent} event */
-  default: async ({ request }) => {
-    const data = await request.formData();
-    const email = data.get('email');
-    const message = data.get('message');
-
-    if (typeof email !== 'string' || typeof message !== 'string') {
-      return fail(400, { success: false });
-    }
+	/** @param {import('@sveltejs/kit').RequestEvent} event */
+	default: async ({ request }) => {
+		const data = await request.formData();
+		const email = data.get('email');
+		const message = data.get('message');
+		
+		if (typeof email !== 'string' || typeof message !== 'string') {
+			return fail(400, { success: false });
+		}
+		const resend = new Resend(process.env.RESEND_API_KEY);
 
     const toEmail = process.env.TO_EMAIL;
     if (!toEmail) {
