@@ -36,10 +36,7 @@
 					<p class="about-txt">
 						I’m also open to freelance or full‑time opportunities, so feel free to reach out!
 					</p>
-					<details class="about-details">
-						<summary class="about-title">Email</summary>
-						<Form {form}/>
-					</details>
+					<Form {form} />
 					<details class="about-details">
 						<summary class="about-title">Links</summary>
 						<ul>
