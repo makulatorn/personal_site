@@ -15,14 +15,6 @@
 
 <div class="wrapper">
 	<Nav />
-
-	<aside class="side-menu">
-		<ul class="side-menu-list">
-			<li><a id="Github" href="https://github.com/makulatorn" target="_blank">Github</a></li>
-			<li><a id="Bandcamp" href="https://makulator.bandcamp.com/" target="_blank">Bandcamp</a></li>
-		</ul>
-	</aside>
-
 	<main>
 		<div class="content-container">
 			<section class="welcome">

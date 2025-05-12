@@ -144,21 +144,6 @@ a:hover, button:hover {
   margin-top: 1em;
 }
 
-.side-menu.open {
-  display: block;
-}
-
-.side-menu {
-  border: 1px dotted #d0ffd7;
-  padding: 1em;
-  margin-bottom: 2em;
-  display: none;
-}
-.side-menu .side-menu-list {
-  display: flex;
-  gap: 100px;
-}
-
 .welcome .title-container {
   border: 1px dotted #d0ffd7;
   padding: 5px;
@@ -232,6 +217,7 @@ textarea {
 }
 
 input[type=email] {
+  width: 100%;
   flex: 1;
   padding: 5px;
 }
@@ -240,6 +226,14 @@ input[type=submit] {
   display: flex;
   width: 90px;
   height: 30px;
+}
+
+#message {
+  width: 100%;
+}
+
+.email-con, .message-con {
+  display: block;
 }
 
 @media only screen and (min-width: 800px) {
@@ -266,17 +260,6 @@ input[type=submit] {
   }
   .welcome .title-container .welcome-subtitle {
     font-size: unset;
-  }
-  .side-menu {
-    right: 0;
-    top: 29em;
-    margin: 20px;
-    position: fixed;
-    display: unset;
-  }
-  .side-menu .side-menu-list {
-    flex-direction: column;
-    gap: 10px;
   }
 }
 @media only screen and (min-width: 900px) {
