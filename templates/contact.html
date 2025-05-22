@@ -35,24 +35,9 @@
                         <p class="about-txt">
                             I’m also open to freelance or full‑time opportunities, so feel free to reach out!
                         </p>
-                        <form 
-                        hx-post="/contact"
-                        hx-target="#form-response"
-                        hx-swap="innerHTML"
-                        hx-indicator="#spinner"
-                        hx-on::after-request="this.reset()"
-                        method="POST">
-                            <div class="email-con">
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" id="email" required />
-                            </div>
+                        
+                        {% include 'components/form.html' %}
 
-                            <div class="message-con">
-                                <label for="message">Message:</label>
-                                <textarea name="message" id="message" required></textarea>
-                            </div>
-                            <input type="submit" value="Submit" />
-                        </form>
                         <div id="form-response"></div>
                         <div id="spinner" class="htmx-indicator">Sending message...</div>
                         <details class="about-details">
