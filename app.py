@@ -49,9 +49,10 @@ def contact():
             return redirect(url_for("contact"))
 
         msg = Message(
-            subject="New email!",
-            sender=app.config['MAIL_USERNAME'],
+            subject="New email from trasha.dev!!",
+            sender=("trasha.dev", app.config['MAIL_USERNAME']),
             recipients=[app.config['MAIL_USERNAME']],
+            reply_to=valid_email,
             body=f"From: {valid_email}\n\nMessage:\n{clean_message}"
         )
 
