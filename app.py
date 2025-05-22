@@ -1,20 +1,12 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
 from flask_mail import Mail, Message
-from dotenv import load_dotenv
 from email_validator import validate_email, EmailNotValidError
-import os
 import bleach
 
-load_dotenv()
-app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY')
+from config import Config
 
-app.config['MAIL_SERVER'] = 'smtp.mail.me.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")
-app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")
-app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_USERNAME")
+app = Flask(__name__)
+app.config.from_object(Config)
 
 mail = Mail(app)
 
@@ -39,6 +31,8 @@ def contact():
             valid_email = validate_email(raw_email).email
         except EmailNotValidError as e:
             flash(f"Invalid email address: {e}", "danger")
+            if request.headers.get("HX-Request"):
+                return render_template("partials/flash.html")
             return redirect(url_for("contact"))
 
         # Sanitize message input (strip all HTML tags)
@@ -46,8 +40,11 @@ def contact():
 
         if not clean_message.strip():
             flash("Message cannot be empty.", "danger")
+            if request.headers.get("HX-Request"):
+                return render_template("partials/flash.html")
             return redirect(url_for("contact"))
 
+        # Compose and send email
         msg = Message(
             subject="New email from trasha.dev!!",
             sender=("trasha.dev", app.config['MAIL_USERNAME']),
@@ -63,10 +60,15 @@ def contact():
             print(f"Mail sending failed: {e}")
             flash("Failed to send message. Please try again later.", "danger")
 
+        # HTMX: return only flash content
+        if request.headers.get("HX-Request"):
+            return render_template("partials/flash.html")
+
+        # Fallback: full page reload
         return redirect(url_for("contact"))
 
     return render_template("contact.html")
-    
+
 
 
 if __name__ == "__main__":

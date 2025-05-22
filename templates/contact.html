@@ -10,6 +10,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/nav.js') }}" defer></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 </head>
 
 <body>
@@ -34,7 +35,13 @@
                         <p class="about-txt">
                             I’m also open to freelance or full‑time opportunities, so feel free to reach out!
                         </p>
-                        <form method="POST">
+                        <form 
+                        hx-post="/contact"
+                        hx-target="#form-response"
+                        hx-swap="innerHTML"
+                        hx-indicator="#spinner"
+                        hx-on::after-request="this.reset()"
+                        method="POST">
                             <div class="email-con">
                                 <label for="email">Email:</label>
                                 <input type="email" name="email" id="email" required />
@@ -46,16 +53,8 @@
                             </div>
                             <input type="submit" value="Submit" />
                         </form>
-                        {% with messages = get_flashed_messages(with_categories=true) %}
-                        {% if messages %}
-                        <ul class="flashes">
-                            {% for category, message in messages %}
-                            <li class="{{ category }}">{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% endwith %}
-
+                        <div id="form-response"></div>
+                        <div id="spinner" class="htmx-indicator">Sending message...</div>
                         <details class="about-details">
                             <summary class="about-title">Links</summary>
                             <ul>
