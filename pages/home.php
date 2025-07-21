@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset='utf-8'>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<meta name="Description" content="Forsiden">
-	<meta name="Keywords" content="miljøbevidst, klimavenlig, bæredygtig, grøn, omstilling, miljø, venlige, produkter">
-	<title>Home</title>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<script src="{{ url_for('static', filename='js/nav.js') }}" defer></script>
-
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="Description" content="Forsiden">
+    <meta name="Keywords" content="miljøbevidst, klimavenlig, bæredygtig, grøn, omstilling, miljø, venlige, produkter">
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/nav.js" defer></script>
 </head>
 
 <body>
 	<div class="wrapper">
-		{% include 'components/header.html' %}
+		<?php include(__DIR__ . '/../components/header.php'); ?>
 		<br>
-		{% include 'components/nav.html' %}
+		<?php include(__DIR__ . '/../components/nav.php'); ?>
 
 		<main>
 			<div class="content-container">

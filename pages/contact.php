@@ -8,17 +8,16 @@
     <meta name="keywords"
         content="miljøbevidst, klimavenlig, bæredygtig, grøn, omstilling, miljø, venlige, produkter" />
     <title>Contact</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/nav.js') }}" defer></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/nav.js" defer></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        {% include 'components/header.html' %}
+        <?php include(__DIR__ . '/../components/header.php'); ?>
         <br>
-        {% include 'components/nav.html' %}
-
+        <?php include(__DIR__ . '/../components/nav.php'); ?>
         <main>
             <div class="content-container">
                 <section class="about">
@@ -35,8 +34,8 @@
                         <p class="about-txt">
                             I’m also open to freelance or full‑time opportunities, so feel free to reach out!
                         </p>
-                        
-                        {% include 'components/form.html' %}
+
+                        <?php include(__DIR__ . '/../components/form.php'); ?>
 
                         <div id="form-response"></div>
                         <div id="spinner" class="htmx-indicator">Sending message...</div>

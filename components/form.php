@@ -1,5 +1,10 @@
-<form hx-post="/contact" hx-target="#form-response" hx-swap="innerHTML" hx-indicator="#spinner"
-    hx-on::after-request="this.reset()" method="POST">
+<form
+    method="POST"
+    action="contact/send"
+    hx-post="contact/send"
+    hx-target="#form-response"
+    hx-indicator="#spinner"
+    hx-on::after-request="this.reset()">
     <div class="email-con">
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" required />
