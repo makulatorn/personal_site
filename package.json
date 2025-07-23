@@ -1,0 +1,10 @@
+{
+  "name": "trasha-dev",
+  "version": "1.0.0",
+  "dependencies": {
+    "nodemailer": "^6.9.4"
+  },
+  "scripts": {
+    "build": "sass sass/style.sass static/css/style.css --style compressed"
+  }
+}
