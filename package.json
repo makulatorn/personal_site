@@ -2,11 +2,12 @@
   "name": "trasha-dev",
   "version": "1.0.0",
   "dependencies": {
-    "nodemailer": "^6.9.4"
+    "nodemailer": "^6.9.4",
+    "sass": "^1.69.0"
   },
   "scripts": {
     "build": "npm install && mkdir -p public && npm run sass && npm run copy",
-    "sass": "sass sass/style.sass public/static/css/style.css --style compressed",
+    "sass": "npx sass sass/style.sass public/static/css/style.css --style compressed",
     "copy": "cp -r pages public/ && cp -r components public/ && cp -r static public/"
   }
 }
