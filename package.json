@@ -5,6 +5,8 @@
     "nodemailer": "^6.9.4"
   },
   "scripts": {
-    "build": "sass sass/style.sass static/css/style.css --style compressed"
+    "build": "npm install && mkdir -p public && npm run sass && npm run copy",
+    "sass": "sass sass/style.sass public/static/css/style.css --style compressed",
+    "copy": "cp -r pages public/ && cp -r components public/ && cp -r static public/"
   }
 }
