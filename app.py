@@ -10,18 +10,24 @@ app.config.from_object(Config)
 
 mail = Mail(app)
 
-@app.route("/")
-def home():    
-    return render_template(
-        'home.html'
-        
-        )
-@app.route("/projects")
-def projects():
-    return render_template('projects.html')
 
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/components/home")
+def components_home():
+    return render_template("/components/home.html")
+
+
+@app.route("/components/projects")
+def components_projects():
+    return render_template("components/projects.html")
+
+
+@app.route("/components/contact", methods=["GET", "POST"])
+def components_contact():
     if request.method == "POST":
         raw_email = request.form.get("email", "")
         raw_message = request.form.get("message", "")
@@ -47,10 +53,10 @@ def contact():
         # Compose and send email
         msg = Message(
             subject="New email from trasha.dev!!",
-            sender=("trasha.dev", app.config['MAIL_USERNAME']),
-            recipients=[app.config['MAIL_USERNAME']],
+            sender=("trasha.dev", app.config["MAIL_USERNAME"]),
+            recipients=[app.config["MAIL_USERNAME"]],
             reply_to=valid_email,
-            body=f"From: {valid_email}\n\nMessage:\n{clean_message}"
+            body=f"From: {valid_email}\n\nMessage:\n{clean_message}",
         )
 
         try:
@@ -67,8 +73,7 @@ def contact():
         # Fallback: full page reload
         return redirect(url_for("contact"))
 
-    return render_template("contact.html")
-
+    return render_template("components/contact.html")
 
 
 if __name__ == "__main__":
