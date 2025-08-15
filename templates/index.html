@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
-    <script src="{{ url_for('static', filename='js/nav.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='ts/nav.ts') }}" defer></script>
     <script src="https://unpkg.com/htmx.org@1.5.0"></script>
   </head>
 
@@ -46,7 +46,7 @@
             <button
               hx-get="components/home"
               hx-target=".content-container"
-              hx-swap="innerHTML"
+              hx-swap="innerHTML show:window:bottom"
             >
               Home
             </button>
@@ -55,16 +55,17 @@
             <button
               hx-get="components/projects"
               hx-target=".content-container"
-              hx-swap="innerHTML"
+              hx-swap="innerHTML show:window:bottom"
             >
               Projects
             </button>
           </li>
           <li>
             <button
+              style="overflow: scroll"
               hx-get="components/contact"
               hx-target=".content-container"
-              hx-swap="innerHTML"
+              hx-swap="innerHTML show:window:bottom"
             >
               Contact
             </button>
@@ -80,4 +81,13 @@
       <footer></footer>
     </div>
   </body>
+  <script>
+    document.body.addEventListener("htmx:afterSwap", function (event) {
+      // Check if the target is the content-container
+      if (event.target.classList.contains("content-container")) {
+        // Scroll the content container into view smoothly
+        event.target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  </script>
 </html>
