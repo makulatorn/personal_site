@@ -39,7 +39,7 @@ def components_contact():
             flash(f"Invalid email address: {e}", "danger")
             if request.headers.get("HX-Request"):
                 return render_template("partials/flash.html")
-            return redirect(url_for("contact"))
+            return redirect(url_for("components/contact.html"))
 
         # Sanitize message input (strip all HTML tags)
         clean_message = bleach.clean(raw_message, tags=[], strip=True)
@@ -48,7 +48,7 @@ def components_contact():
             flash("Message cannot be empty.", "danger")
             if request.headers.get("HX-Request"):
                 return render_template("partials/flash.html")
-            return redirect(url_for("contact"))
+            return redirect(url_for("components/contact.html"))
 
         # Compose and send email
         msg = Message(
@@ -71,7 +71,7 @@ def components_contact():
             return render_template("partials/flash.html")
 
         # Fallback: full page reload
-        return redirect(url_for("contact"))
+        return redirect(url_for("components_contact"))
 
     return render_template("components/contact.html")
 
