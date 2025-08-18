@@ -1,12 +1,27 @@
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    flash,
+    url_for,
+    jsonify,
+)
 from flask_mail import Mail, Message
+from flask_caching import Cache
 from email_validator import validate_email, EmailNotValidError
 import bleach
-
 from config import Config
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
+app.config.update(
+    CACHE_TYPE="SimpleCache",
+    CACHE_DEFAULT_TIMEOUT=300,
+    DEBUG=True,
+)
+cache = Cache(app)
 
 mail = Mail(app)
 
@@ -76,5 +91,14 @@ def components_contact():
     return render_template("components/contact.html")
 
 
+@app.route("/github-repo")
+@cache.cached(timeout=300)
+def get_data():
+    import requests
+
+    response = requests.get("https://api.github.com/users/makulatorn/repos")
+    return jsonify(response.json())
+
+
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader="true")
+    app.run(debug=False, use_reloader="true")

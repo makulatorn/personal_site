@@ -81,13 +81,4 @@
       <footer></footer>
     </div>
   </body>
-  <script>
-    document.body.addEventListener("htmx:afterSwap", function (event) {
-      // Check if the target is the content-container
-      if (event.target.classList.contains("content-container")) {
-        // Scroll the content container into view smoothly
-        event.target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-  </script>
 </html>
