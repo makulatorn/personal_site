@@ -11,17 +11,22 @@
   max-width: 1440px;
   box-sizing: content-box;
 }
+@keyframes details-show {
+  from {
+    opacity: 0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
 
+details[open] > *:not(summary) {
+  animation: details-show 300ms ease-in-out;
+}
 main {
   border: 3px solid #d0ffd7;
   padding: 5px;
   height: 100%;
   padding: 10px;
   margin: 15px auto;
-}
-
-.commit-log-entry {
-  margin: 5px;
 }
 
 summary {
@@ -33,11 +38,13 @@ li {
   padding: 5px;
 }
 
-a, button {
+a,
+button {
   padding: 0.2em 0.3em;
 }
-a:hover, button:hover {
-  background-color: #274E30;
+a:hover,
+button:hover {
+  background-color: #274e30;
   transition: background-color 0.5s;
 }
 
@@ -49,14 +56,17 @@ a:hover, button:hover {
 }
 .burger {
   border: none;
-  font-size: 25px;
+  font-size: 2rem;
   cursor: pointer;
   padding: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: flex-end;
 }
 
 .ASCIItitle {
   text-align: center;
-  font-size: 12px;
+  font-size: 2vw;
   margin: 11px;
 }
 
@@ -83,6 +93,9 @@ a:hover, button:hover {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
+  margin-right: 0;
+  display: flex;
+  align-items: flex-end;
 }
 
 .welcome .title-container {
@@ -111,7 +124,7 @@ a:hover, button:hover {
   margin-top: 10px;
 }
 .about-title:hover {
-  background-color: #274E30;
+  background-color: #274e30;
   transition: background-color 0.5s;
 }
 .about-summary {
@@ -128,6 +141,10 @@ a:hover, button:hover {
 }
 .about-summary-list {
   padding-left: 30px;
+}
+.about-details {
+  opacity: 1;
+  transition: opacity 1s ease-in;
 }
 
 form {
@@ -157,13 +174,13 @@ textarea {
   height: 100px;
 }
 
-input[type=email] {
+input[type="email"] {
   width: 100%;
   flex: 1;
   padding: 5px;
 }
 
-input[type=submit] {
+input[type="submit"] {
   display: flex;
   width: 90px;
   height: 30px;
@@ -173,7 +190,8 @@ input[type=submit] {
   width: 100%;
 }
 
-.email-con, .message-con {
+.email-con,
+.message-con {
   display: block;
 }
 
@@ -205,7 +223,7 @@ input[type=submit] {
 }
 @media only screen and (min-width: 900px) {
   .ASCIItitle {
-    font-size: 1.5em;
+    font-size: 2vw;
   }
 }
 

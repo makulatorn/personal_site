@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Description" content="Forsiden" />
+    <meta name="Description" content="A personal site/portfolio showcasing my skillsets, projects and telling a bit about who i am and what i find interesting" />
+    <meta name="author" content="Trasha"
     <meta
       name="Keywords"
-      content="miljøbevidst, klimavenlig, bæredygtig, grøn, omstilling, miljø, venlige, produkter"
+      content="trasha, developer, webdev, html, javascript, python, coding, music, diy"
     />
-    <title>Home</title>
+    <title>Trasha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -22,18 +23,20 @@
     <div class="wrapper">
       <header>
         <pre class="ASCIItitle">
-
-
-+---------------------------------------+
-| ___________  ___   _____ _   _   ___  |
-||_   _| ___ \/ _ \ /  ___| | | | / _ \ |
-|  | | | |_/ / /_\ \\ `--.| |_| |/ /_\ \|
-|  | | |    /|  _  | `--. \  _  ||  _  ||
-|  | | | |\ \| | | |/\__/ / | | || | | ||
-|  \_/ \_| \_\_| |_/\____/\_| |_/\_| |_/|
-+---------------------------------------+
-                
-                
++===========================================================+
+|                                                           |
+|@@@@@@@  @@@@@@@    @@@@@@    @@@@@@   @@@  @@@   @@@@@@   |
+|@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@   @@@  @@@  @@@@@@@@  |
+|  @@!    @@!  @@@  @@!  @@@  !@@       @@!  @@@  @@!  @@@  |
+|  !@!    !@!  @!@  !@!  @!@  !@!       !@!  @!@  !@!  @!@  |
+|  @!!    @!@!!@!   @!@!@!@!  !!@@!!    @!@!@!@!  @!@!@!@!  |
+|  !!!    !!@!@!    !!!@!!!!   !!@!!!   !!!@!!!!  !!!@!!!!  |
+|  !!:    !!: :!!   !!:  !!!       !:!  !!:  !!!  !!:  !!!  |
+|  :!:    :!:  !:!  :!:  !:!      !:!   :!:  !:!  :!:  !:!  |
+|   ::    ::   :::  ::   :::  :::: ::   ::   :::  ::   :::  |
+|   :      :   : :   :   : :  :: : :     :   : :   :   : :  |
+|                                                           |
++===========================================================+
            </pre
         >
         <h1 class="subtitel">Coding, music and other personal projects!</h1>
@@ -44,6 +47,7 @@
         <ul class="nav-tabs" id="navTabs">
           <li>
             <button
+              style="overflow: scroll"
               hx-get="components/home"
               hx-target=".content-container"
               hx-swap="innerHTML show:window:bottom"
@@ -53,6 +57,7 @@
           </li>
           <li>
             <button
+              style="overflow: scroll"
               hx-get="components/projects"
               hx-target=".content-container"
               hx-swap="innerHTML show:window:bottom"
